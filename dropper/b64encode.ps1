@@ -1,2 +1,1 @@
-$buf = 'test'
-echo ([Convert]::ToBase64String(([System.Text.Encoding]::Unicode.GetBytes($buf))))
+([Convert]::ToBase64String(([System.Text.Encoding]::Unicode.GetBytes((Get-Content ./vector.payload.ps1)))))
