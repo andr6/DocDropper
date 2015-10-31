@@ -5,10 +5,8 @@ Function testUrl($url){
   }catch{}
   $stat=$res.StatusCode
   If($stat-eq200){
-    write-host("OKOKOK")
     return $res.GetResponseStream()
   }Else{
-    Write-host("MORT")
     return $false
   }
 }
