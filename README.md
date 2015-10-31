@@ -1,4 +1,4 @@
-## Vectors for spear phishing
+## 21st century spear phishing
 #### Debug mode
 ```
 powershell.exe -ExecutionPolicy Bypass -encodedCommand ([Convert]::ToBase64String(([System.Text.Encoding]::Unicode.GetBytes((Get-Content ./vector.payload.ps1)))))
