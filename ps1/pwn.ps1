@@ -18,8 +18,6 @@ $process.StartInfo.UseShellExecute = $false
 $process.StartInfo.RedirectStandardError = $true
 $process.StartInfo.RedirectStandardInput = $true
 $process.StartInfo.RedirectStandardOutput = $true
-$process.StartInfo.StandardOutputEncoding = System.Text.AsciiEncoding
-$process.StartInfo.StandardErrorEncoding = System.Text.AsciiEncoding
 $process.Start()
 $errorstream = $process.StandardError
 $inputstream = $process.StandardInput
