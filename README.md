@@ -5,7 +5,7 @@ DocDropper is a Proof Of Concept of a DOC file who run a payload like a meterpre
 
 Indeed, DocDropper use a PowerShell Dynamic Generation Algorithm to find his C&C hosted on Github.com.
 
-Begin by `./dropper/vector.payload.ps1` : This is the encoded payload in the active Macro.
+Begin by `./dropper/vector.payload.ps1` : this is the encoded payload in the active Macro.
 
 ## Miscellaneous
 
