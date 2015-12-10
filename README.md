@@ -1,4 +1,11 @@
-## Vectors for spear phishing
+## DocDropper
+#### Reboot Spear Phishing
+
+DocDropper is a Proof Of Concept of a DOC file who run a payload like a meterpreter, empire, etc.
+Indeed, DocDropper use a PowerShell Dynamic Generation Algorithm to find his C&C hosted on Github.com.
+
+Begin by `./dropper/vector.payload.ps1` : This is the encoded payload in the active Macro.
+
 #### Debug mode
 ```
 powershell.exe -ExecutionPolicy Bypass -encodedCommand ([Convert]::ToBase64String(([System.Text.Encoding]::Unicode.GetBytes((Get-Content ./vector.payload.ps1)))))
