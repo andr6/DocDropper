@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<job id="dropper">
+ <script language="VBScript">
+   <![CDATA[
+       CreateObject("WScript.Shell").Exec "calc.exe"
+   ]]>
+ </script>
+</job>
