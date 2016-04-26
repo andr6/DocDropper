@@ -4,7 +4,7 @@
 
 #### Notice
 
-DocDropper (POC+) is a .doc file dropper. You can start from it to setup Meterpreter, Empire, etc.
+DocDropper is a .doc file dropper. You can start from it to setup Meterpreter, Empire, etc.
 
 Indeed, DocDropper use a PowerShell Dynamic Generation Algorithm (DGA) to find a C&C hosted on Github.com.
 
